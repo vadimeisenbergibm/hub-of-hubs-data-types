@@ -11,5 +11,5 @@ func GetBundleTypes() []string {
 	bundleTypes = append(bundleTypes, PolicyType)
 	bundleTypes = append(bundleTypes, PlacementRuleType)
 	bundleTypes = append(bundleTypes, PlacementBindingType)
-
+	return bundleTypes
 }
