@@ -1,4 +1,4 @@
-package hub_of_hubs_data_types
+package datatypes
 
 type ObjectsBundle struct {
 	Objects 		[]interface{} `json:"objects"`
