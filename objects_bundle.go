@@ -6,11 +6,10 @@ type ObjectsBundle struct {
 }
 
 func NewObjectBundle() *ObjectsBundle {
-	bundle := ObjectsBundle {
+	return &ObjectsBundle {
 		Objects: make([]interface{}, 0),
 		DeletedObjects: make([]interface{}, 0),
 	}
-	return &bundle
 }
 
 func (bundle *ObjectsBundle) AddObject(object interface{}) {
