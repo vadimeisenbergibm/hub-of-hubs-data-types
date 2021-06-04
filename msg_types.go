@@ -1,11 +1,5 @@
 package datatypes
 
 const (
-	PolicyType = "PoliciesBundle"
-	PlacementRuleType = "PlacementRulesBundle"
-	PlacementBindingType = "PlacementBindingsBundle"
+	SpecBundle = "SpecBundle"
 )
-
-func GetBundleTypes() []string {
-	return []string {PolicyType, PlacementRuleType, PlacementBindingType}
-}
