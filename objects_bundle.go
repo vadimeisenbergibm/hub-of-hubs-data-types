@@ -1,8 +1,18 @@
 package datatypes
 
+import (
+	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
+	"k8s.io/apimachinery/pkg/runtime"
+)
+
 type ObjectsBundle struct {
 	Objects        []interface{} `json:"objects"`
 	DeletedObjects []interface{} `json:"deletedObjects"`
+}
+
+type Object interface {
+	metav1.Object
+	runtime.Object
 }
 
 func NewObjectBundle() *ObjectsBundle {
