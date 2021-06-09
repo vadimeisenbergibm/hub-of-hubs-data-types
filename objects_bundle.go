@@ -5,14 +5,15 @@ import (
 	"k8s.io/apimachinery/pkg/runtime"
 )
 
-type ObjectsBundle struct {
-	Objects        []Object `json:"objects"`
-	DeletedObjects []Object `json:"deletedObjects"`
-}
-
+// represents k8s object
 type Object interface {
 	metav1.Object
 	runtime.Object
+}
+
+type ObjectsBundle struct {
+	Objects        []Object `json:"objects"`
+	DeletedObjects []Object `json:"deletedObjects"`
 }
 
 func NewObjectBundle() *ObjectsBundle {
