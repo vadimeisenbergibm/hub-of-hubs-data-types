@@ -6,8 +6,8 @@ import (
 )
 
 type ObjectsBundle struct {
-	Objects        []interface{} `json:"objects"`
-	DeletedObjects []interface{} `json:"deletedObjects"`
+	Objects        []Object `json:"objects"`
+	DeletedObjects []Object `json:"deletedObjects"`
 }
 
 type Object interface {
@@ -17,15 +17,15 @@ type Object interface {
 
 func NewObjectBundle() *ObjectsBundle {
 	return &ObjectsBundle {
-		Objects:        make([]interface{}, 0),
-		DeletedObjects: make([]interface{}, 0),
+		Objects:        make([]Object, 0),
+		DeletedObjects: make([]Object, 0),
 	}
 }
 
-func (bundle *ObjectsBundle) AddObject(object interface{}) {
+func (bundle *ObjectsBundle) AddObject(object Object) {
 	bundle.Objects = append(bundle.Objects, object)
 }
 
-func (bundle *ObjectsBundle) AddDeletedObject(object interface{}) {
+func (bundle *ObjectsBundle) AddDeletedObject(object Object) {
 	bundle.DeletedObjects = append(bundle.DeletedObjects, object)
 }
