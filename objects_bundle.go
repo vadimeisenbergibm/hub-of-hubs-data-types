@@ -11,9 +11,9 @@ type Object interface {
 	runtime.Object
 }
 
-type ObjectsBundle struct {
-	Objects        []Object `json:"objects"`
-	DeletedObjects []Object `json:"deletedObjects"`
+type Bundle interface {
+	AddObject(object Object)
+	AddDeletedObject(object Object)
 }
 
 func NewObjectBundle() *ObjectsBundle {
@@ -23,10 +23,7 @@ func NewObjectBundle() *ObjectsBundle {
 	}
 }
 
-func (bundle *ObjectsBundle) AddObject(object Object) {
-	bundle.Objects = append(bundle.Objects, object)
-}
-
-func (bundle *ObjectsBundle) AddDeletedObject(object Object) {
-	bundle.DeletedObjects = append(bundle.DeletedObjects, object)
+type ObjectsBundle struct {
+	Objects        []Object `json:"objects"`
+	DeletedObjects []Object `json:"deletedObjects"`
 }
