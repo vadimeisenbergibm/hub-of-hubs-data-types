@@ -14,6 +14,7 @@ type Object interface {
 type Bundle interface {
 	AddObject(object Object)
 	AddDeletedObject(object Object)
+	GetObjectsBundle() *ObjectsBundle
 }
 
 func NewObjectBundle() *ObjectsBundle {
