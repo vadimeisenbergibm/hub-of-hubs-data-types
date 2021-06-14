@@ -3,6 +3,7 @@ package bundle
 import (
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/runtime"
+	"k8s.io/apimachinery/pkg/types"
 )
 
 type Object interface {
@@ -12,5 +13,5 @@ type Object interface {
 
 type Bundle interface {
 	AddObject(object Object)
-	AddDeletedObject(object Object)
+	AddDeletedObject(uid types.UID)
 }
