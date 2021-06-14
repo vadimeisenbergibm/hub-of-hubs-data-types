@@ -1,6 +1,6 @@
 package datatypes
 
 const (
-	SpecBundle = "SpecBundle"
+	SpecBundle   = "SpecBundle"
 	StatusBundle = "StatusBundle"
 )
