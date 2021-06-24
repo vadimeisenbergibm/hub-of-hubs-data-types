@@ -5,4 +5,6 @@ const (
 	StatusBundle = "StatusBundle"
 
 	ManagedClustersMsgKey = "ManagedClusters"
+	ClustersPerPolicyMsgKey = "ClustersPerPolicy"
+	PolicyComplianceMsgKey = "PolicyCompliance"
 )
