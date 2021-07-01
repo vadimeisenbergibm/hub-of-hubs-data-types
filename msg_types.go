@@ -4,7 +4,7 @@ const (
 	SpecBundle   = "SpecBundle"
 	StatusBundle = "StatusBundle"
 
-	ManagedClustersMsgKey = "ManagedClusters"
+	ManagedClustersMsgKey   = "ManagedClusters"
 	ClustersPerPolicyMsgKey = "ClustersPerPolicy"
-	PolicyComplianceMsgKey = "PolicyCompliance"
+	PolicyComplianceMsgKey  = "PolicyCompliance"
 )
