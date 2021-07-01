@@ -1,9 +1,7 @@
 package status
 
-import "k8s.io/apimachinery/pkg/types"
-
 type ClustersPerPolicy struct {
-	PolicyId        types.UID `json:"policyId"`
+	PolicyId        string `json:"policyId"`
 	Clusters        []string  `json:"clusters"`
 	ResourceVersion string    `json:"resourceVersion"`
 }
