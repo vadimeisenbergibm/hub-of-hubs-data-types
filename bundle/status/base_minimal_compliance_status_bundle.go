@@ -5,8 +5,8 @@ import v1 "github.com/open-cluster-management/governance-policy-propagator/pkg/a
 type MinimalPolicyComplianceStatus struct {
 	PolicyId             string               `json:"policyId"`
 	RemediationAction    v1.RemediationAction `json:"remediationAction"`
-	NonCompliantClusters uint                 `json:"nonCompliantClusters"`
-	AppliedClusters      uint                 `json:"appliedClusters"`
+	NonCompliantClusters int                 `json:"nonCompliantClusters"`
+	AppliedClusters      int                 `json:"appliedClusters"`
 }
 
 type BaseMinimalComplianceStatusBundle struct {
