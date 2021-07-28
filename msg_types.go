@@ -10,4 +10,5 @@ const (
 	ManagedClustersMsgKey   = "ManagedClusters"
 	ClustersPerPolicyMsgKey = "ClustersPerPolicy"
 	PolicyComplianceMsgKey  = "PolicyCompliance"
+	MinimalPolicyComplianceMsgKey  = "MinimalPolicyCompliance"
 )
