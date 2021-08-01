@@ -11,10 +11,10 @@ import (
 type AggregationLevel string
 
 const (
-	// full is an AggregationLevel
+	// Full is an AggregationLevel
 	Full AggregationLevel = "full"
 
-	// minimal is an AggregationLevel
+	// Minimal is an AggregationLevel
 	Minimal AggregationLevel = "minimal"
 )
 
@@ -24,8 +24,7 @@ type ConfigSpec struct {
 }
 
 // ConfigStatus defines the observed state of Config
-type ConfigStatus struct {
-}
+type ConfigStatus struct{}
 
 //+kubebuilder:object:root=true
 //+kubebuilder:subresource:status

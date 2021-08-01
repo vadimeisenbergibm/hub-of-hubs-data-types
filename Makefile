@@ -7,11 +7,13 @@
 #   - clean-vendor - removes third party libraries from vendor directory
 
 .PHONY: all				##formats the code and downloads vendor libs
-all: fmt vendor
+all: clean-vendor fmt vendor
 
 .PHONY: fmt				##formats the code
 fmt:
+	@gci -w .
 	@go fmt ./...
+	@gofumpt -w .
 
 .PHONY: vendor			##download all third party libraries and puts them inside vendor directory
 vendor:
@@ -20,6 +22,12 @@ vendor:
 .PHONY: clean-vendor			##removes third party libraries from vendor directory
 clean-vendor:
 	-@rm -rf vendor
+
+.PHONY: lint				##runs code analysis tools
+lint: clean-vendor
+	go vet ./...
+	golint ./...
+	golangci-lint run ./...
 
 .PHONY: help				##show this help message
 help:

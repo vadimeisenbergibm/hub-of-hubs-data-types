@@ -1,14 +1,19 @@
 package datatypes
 
 const (
-	// message types
-	SpecBundle   = "SpecBundle"
+	// SpecBundle - spec bundle message type.
+	SpecBundle = "SpecBundle"
+	// StatusBundle - status bundle message type.
 	StatusBundle = "StatusBundle"
-	Config       = "Config"
+	// Config - hub of hubs config message type.
+	Config = "Config"
 
-	// message IDs
-	ManagedClustersMsgKey   = "ManagedClusters"
+	// ManagedClustersMsgKey - managed clusters message key.
+	ManagedClustersMsgKey = "ManagedClusters"
+	// ClustersPerPolicyMsgKey - clusters per policy message key.
 	ClustersPerPolicyMsgKey = "ClustersPerPolicy"
-	PolicyComplianceMsgKey  = "PolicyCompliance"
-	MinimalPolicyComplianceMsgKey  = "MinimalPolicyCompliance"
+	// PolicyComplianceMsgKey - policy compliance message key.
+	PolicyComplianceMsgKey = "PolicyCompliance"
+	// MinimalPolicyComplianceMsgKey - minimal policy compliance message key.
+	MinimalPolicyComplianceMsgKey = "MinimalPolicyCompliance"
 )
