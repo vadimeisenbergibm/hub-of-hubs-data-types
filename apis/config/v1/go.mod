@@ -1,4 +1,4 @@
-module github.com/vadimeisenbergibm/hub-of-hubs-data-types/config
+module github.com/vadimeisenbergibm/hub-of-hubs-data-types/apis/config/v1
 
 go 1.16
 
